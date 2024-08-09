@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
+    
+
 
     @ExceptionHandler(SQLException.class)
     public ResponseEntity<String> sqlBadGrammarExceptionHandler(SQLException ex){
@@ -24,10 +26,5 @@ public class GlobalExceptionHandler {
         String name = ex.getParameterName();
         return new ResponseEntity<>("Missing required parameter: " + name, HttpStatus.BAD_REQUEST);
     }
-
-
-
-
-
 
 }

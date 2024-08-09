@@ -3,9 +3,6 @@ package com.example.planner.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.List;
-import java.util.Map;
-
 @Configuration
 public class ItemsConfigurations {
 

@@ -1,12 +1,12 @@
 package com.example.planner.service;
 
-import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 
-import com.example.planner.config.ItemsConfigurations;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.example.planner.model.ToDoItems;
@@ -52,7 +52,6 @@ public class ToDoService implements TodoServiceInterface{
     // patch update
     public int patchUpdate(int id,String parameter){
             List<Map<String,Object>> list = fetchAll();
-            Object ID = (Object) id;
             for(Map<String,Object> items : list){
                 if(items.get("id").equals(id)){
                     return repo.patchUpdate(id,parameter);
@@ -73,6 +72,8 @@ public class ToDoService implements TodoServiceInterface{
         return 0;
     }
 
+
+    
 
 
 
